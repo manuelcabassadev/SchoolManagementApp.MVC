@@ -12,7 +12,9 @@
     <link rel="stylesheet" href="~/SchoolManagementApp.MVC.styles.css" asp-append-version="true" />
 
     @* Fontawsome *@
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 
@@ -38,17 +40,28 @@
                             <a class="nav-link text-white" asp-area="" asp-controller="Courses"
                                 asp-action="Index">Courses</a>
                         </li>
-                                                <li class="nav-item">
+                        <li class="nav-item">
                             <a class="nav-link text-white" asp-area="" asp-controller="Students"
                                 asp-action="Index">Students</a>
                         </li>
-                                                <li class="nav-item">
+                        <li class="nav-item">
                             <a class="nav-link text-white" asp-area="" asp-controller="Lecturers"
                                 asp-action="Index">Lecturers</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-white" asp-area="" asp-controller="Home"
                                 asp-action="Privacy">Privacy</a>
+                        </li>
+                    </ul>
+                    <!-- Push Login/Logout to the right -->
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Account"
+                                asp-action="Login"><i class="fa-solid fa-user"></i> Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Account"
+                                asp-action="Logout">Logout</a>
                         </li>
                     </ul>
                 </div>

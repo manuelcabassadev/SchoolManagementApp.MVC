@@ -10,6 +10,7 @@ using SchoolManagementApp.MVC.Data;
 
 namespace SchoolManagementApp.MVC.Controllers
 {
+    [Authorize]
     public class CoursesController : Controller
     {
         private readonly SchoolManagementDbContext _context;
@@ -20,6 +21,7 @@ namespace SchoolManagementApp.MVC.Controllers
         }
 
         // GET: Courses
+        
         public async Task<IActionResult> Index()
         {
             return View(await _context.Courses.ToListAsync());

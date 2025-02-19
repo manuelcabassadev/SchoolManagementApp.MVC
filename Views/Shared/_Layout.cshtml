@@ -36,6 +36,8 @@
                             <a class="nav-link text-white" asp-area="" asp-controller="Home"
                                 asp-action="About">About</a>
                         </li>
+                        @if(User.Identity.IsAuthenticated)
+                        {
                         <li class="nav-item">
                             <a class="nav-link text-white" asp-area="" asp-controller="Courses"
                                 asp-action="Index">Courses</a>
@@ -49,20 +51,31 @@
                                 asp-action="Index">Lecturers</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Home"
-                                asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Class"
+                                asp-action="Index">class Magement</a>
                         </li>
+                        }
+
                     </ul>
+
                     <!-- Push Login/Logout to the right -->
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Account"
-                                asp-action="Login"><i class="fa-solid fa-user"></i> Login</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Account"
-                                asp-action="Logout">Logout</a>
-                        </li>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-white" asp-area="" asp-controller="Account"
+                                    asp-action="Profile">@User.Identity.Name</a>
+                                <a class="nav-link text-white" asp-area="" asp-controller="Account"
+                                    asp-action="Logout">Logout</a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-white" asp-area="" asp-controller="Account"
+                                    asp-action="Login"><i class="fa-solid fa-user"></i> Login</a>
+                            </li>
+                        }
                     </ul>
                 </div>
             </div>

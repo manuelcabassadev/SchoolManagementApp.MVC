@@ -4,44 +4,51 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1 class="mb-4">List of Classes</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a class="btn btn-primary" asp-action="Create"><i class="fa-solid fa-plus"></i> Create New</a>
 </p>
-<table class="table">
-    <thead>
+<table class="table table-striped table-hover">
+    <thead class="table-dark">
         <tr>
             <th>
-                qHtml.DisplayNameFor(model => model.Time)
+                @Html.DisplayNameFor(model => model.Time)
             </th>
             <th>
-                qHtml.DisplayNameFor(model => model.Courses)
+                @Html.DisplayNameFor(model => model.Courses)
             </th>
             <th>
-                qHtml.DisplayNameFor(model => model.Lecturer)
+                @Html.DisplayNameFor(model => model.Lecturer)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-qforeach (var item in Model) {
+@foreach (var item in Model) {
         <tr>
             <td>
-                qHtml.DisplayFor(modelItem => item.Time)
+                @Html.DisplayFor(modelItem => item.Time)
             </td>
             <td>
-                qHtml.DisplayFor(modelItem => item.Courses.Id)
+                @Html.DisplayFor(modelItem => item.Courses.Id)
             </td>
             <td>
-                qHtml.DisplayFor(modelItem => item.Lecturer.Id)
+                @Html.DisplayFor(modelItem => item.Lecturer.Id)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="qitem.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="qitem.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="qitem.Id">Delete</a>
+                <a asp-action="Edit" class="btn btn-info" asp-route-id="@item.Id"><i class="fa-solid fa-pen-to-square"></i></a> 
+                <a asp-action="Details" class="btn btn-warning" asp-route-id="@item.Id"><i class="fa-solid fa-circle-info"></i></a> 
+                <a asp-action="Delete" class="btn btn-danger" asp-route-id="@item.Id"><i class="fa-solid fa-trash"></i></a>
             </td>
         </tr>
 }
     </tbody>
 </table>
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('#table').DataTable();
+        });
+    </script>
+}

@@ -4,7 +4,7 @@
     ViewData["Title"] = "Delete";
 }
 
-<h1>Delete Course</h1>
+<h1 class="MB-4">Delete Course</h1>
 
 <h3 class="text-danger">Are you sure you want to delete this?**</h3>
 <div>
@@ -13,19 +13,19 @@
   <form class="row">
 
     <div class="mb-3">
-      <label for="name" class="form-label">qHtml.DisplayNameFor(model => model.Name)</label>
+      <label for="name" class="form-label">@Html.DisplayNameFor(model => model.Name)</label>
       <input type="text" class="form-control" id="name" aria-describedby="name"
-        value="qHtml.DisplayFor(model => model.Name)" readonly>
+        value="@Html.DisplayFor(model => model.Name)" readonly>
     </div>
     <div class="mb-3">
-      <label for="name" class="form-label">qHtml.DisplayNameFor(model => model.Code)</label>
+      <label for="name" class="form-label">@Html.DisplayNameFor(model => model.Code)</label>
       <input type="text" class="form-control" id="name" aria-describedby="name"
-        value="qHtml.DisplayFor(model => model.Code)" readonly>
+        value="@Html.DisplayFor(model => model.Code)" readonly>
     </div>
     <div class="mb-3">
-      <label for="name" class="form-label">qHtml.DisplayNameFor(model => model.Credits)</label>
+      <label for="name" class="form-label">@Html.DisplayNameFor(model => model.Credits)</label>
       <input type="text" class="form-control" id="name" aria-describedby="name"
-        value="qHtml.DisplayFor(model => model.Credits)" readonly>
+        value="@Html.DisplayFor(model => model.Credits)" readonly>
     </div>
   </form>
     

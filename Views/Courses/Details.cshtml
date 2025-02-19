@@ -11,24 +11,24 @@
   <form class="row">
 
     <div class="mb-3">
-      <label for="name" class="form-label">qHtml.DisplayNameFor(model => model.Name)</label>
+      <label for="name" class="form-label">@Html.DisplayNameFor(model => model.Name)</label>
       <input type="text" class="form-control" id="name" aria-describedby="name"
-        value="qHtml.DisplayFor(model => model.Name)" readonly>
+        value="@Html.DisplayFor(model => model.Name)" readonly>
     </div>
     <div class="mb-3">
-      <label for="name" class="form-label">qHtml.DisplayNameFor(model => model.Code)</label>
+      <label for="name" class="form-label">@Html.DisplayNameFor(model => model.Code)</label>
       <input type="text" class="form-control" id="name" aria-describedby="name"
-        value="qHtml.DisplayFor(model => model.Code)" readonly>
+        value="@Html.DisplayFor(model => model.Code)" readonly>
     </div>
     <div class="mb-3">
-      <label for="name" class="form-label">qHtml.DisplayNameFor(model => model.Credits)</label>
+      <label for="name" class="form-label">@Html.DisplayNameFor(model => model.Credits)</label>
       <input type="text" class="form-control" id="name" aria-describedby="name"
-        value="qHtml.DisplayFor(model => model.Credits)" readonly>
+        value="@Html.DisplayFor(model => model.Credits)" readonly>
     </div>
   </form>
 
 </div>
 <div>
-  <a asp-action="Edit" class="btn btn-primary" asp-route-id="qModel?.Id">Edit</a>
+  <a asp-action="Edit" class="btn btn-primary" asp-route-id="@Model?.Id">Edit</a>
   <a class="btn btn-danger" asp-action="Index"><i class="fa-solid fa-house"></i> Back to List</a>
 </div>

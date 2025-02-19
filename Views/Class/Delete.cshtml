@@ -10,26 +10,34 @@
 <div>
     <h4>Class</h4>
     <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            qHtml.DisplayNameFor(model => model.Time)
-        </dt>
-        <dd class = "col-sm-10">
-            qHtml.DisplayFor(model => model.Time)
-        </dd>
-        <dt class = "col-sm-2">
-            qHtml.DisplayNameFor(model => model.Courses)
-        </dt>
-        <dd class = "col-sm-10">
-            qHtml.DisplayFor(model => model.Courses.Id)
-        </dd>
-        <dt class = "col-sm-2">
-            qHtml.DisplayNameFor(model => model.Lecturer)
-        </dt>
-        <dd class = "col-sm-10">
-            qHtml.DisplayFor(model => model.Lecturer.Id)
-        </dd>
-    </dl>
+    <form class="row">
+
+        <div class="mb-3">
+            <label for="Time" class="form-label">@Html.DisplayNameFor(model => model.Time)</label>
+            <input type="text" class="form-control" id="Time" aria-describedby="name"
+                value="@Html.DisplayFor(model => model.Time)" readonly>
+        </div>
+        <div class="mb-3">
+            <label for="Courses" class="form-label">@Html.DisplayNameFor(model => model.Courses)</label>
+            <input type="text" class="form-control" id="Courses" aria-describedby="name"
+                value="@Html.DisplayFor(model => model.Courses)" readonly>
+        </div>
+        <div class="mb-3">
+            <label for="Courses.Id" class="form-label">@Html.DisplayNameFor(model => model.Courses.Id)</label>
+            <input type="text" class="form-control" id="Courses.Id" aria-describedby="name"
+                value="@Html.DisplayFor(model => model.Courses.Id)" readonly>
+        </div>
+        <div class="mb-3">
+            <label for="Lecturer" class="form-label">@Html.DisplayNameFor(model => model.Lecturer)</label>
+            <input type="text" class="form-control" id="Lecturer" aria-describedby="name"
+                value="@Html.DisplayFor(model => model.Lecturer)" readonly>
+        </div>
+        <div class="mb-3">
+            <label for="Lecturer.Id" class="form-label">@Html.DisplayNameFor(model => model.Lecturer.Id)</label>
+            <input type="text" class="form-control" id="Lecturer.Id" aria-describedby="name"
+                value="@Html.DisplayFor(model => model.Lecturer.Id)" readonly>
+        </div>
+    </form>
     
     <form asp-action="Delete">
         <input type="hidden" asp-for="Id" />

@@ -4,9 +4,8 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
+<h1 class="mb-4">Edit Enrollment</h1>
 
-<h4>Enrollment</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -29,14 +28,11 @@
                 <span asp-validation-for="Grade" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                                <input type="submit" value="Saves Changes" class="btn btn-primary" />
+                <a class="btn btn-danger" asp-action="Index"><i class="fa-solid fa-house"></i> Back to List</a>"btn btn-primary" />
             </div>
         </form>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
 </div>
 
 @section Scripts {

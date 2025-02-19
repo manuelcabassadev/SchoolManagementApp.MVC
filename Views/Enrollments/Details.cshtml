@@ -4,33 +4,42 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<h1 class="mb-4">Details Enrollment</h1>
 
 <div>
     <h4>Enrollment</h4>
     <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Grade)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Grade)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Class)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Class.Id)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Student)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Student.Id)
-        </dd>
-    </dl>
+
+    <form class="row">
+
+        <div class="mb-3">
+            <label for="Grade" class="form-label">@Html.DisplayNameFor(model => model.Grade)</label>
+            <input type="text" class="form-control" id="Grade" aria-describedby="name"
+                value="@Html.DisplayFor(model => model.Grade)" readonly>
+        </div>
+        <div class="mb-3">
+            <label for="Class" class="form-label">@Html.DisplayNameFor(model => model.Class)</label>
+            <input type="text" class="form-control" id="Class" aria-describedby="name"
+                value="@Html.DisplayFor(model => model.Class)" readonly>
+        </div>
+        <div class="mb-3">
+            <label for="Class.Id" class="form-label">@Html.DisplayNameFor(model => model.Class.Id)</label>
+            <input type="text" class="form-control" id="Class.Id" aria-describedby="name"
+                value="@Html.DisplayFor(model => model.Class.Id)" readonly>
+        </div>
+        <div class="mb-3">
+            <label for="Student" class="form-label">@Html.DisplayNameFor(model => model.Student)</label>
+            <input type="text" class="form-control" id="Student" aria-describedby="Student"
+                value="@Html.DisplayFor(model => model.Student)" readonly>
+        </div>
+        <div class="mb-3">
+            <label for="Student.Id" class="form-label">@Html.DisplayNameFor(model => model.Student.Id)</label>
+            <input type="text" class="form-control" id="Student.Id" aria-describedby="Student.Id"
+                value="@Html.DisplayFor(model => model.Student.Id)" readonly>
+        </div>
+    </form>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" class="btn btn-primary" asp-route-id="@Model?.Id">Edit</a>
+    <a class="btn btn-danger" asp-action="Index"><i class="fa-solid fa-house"></i> Back to List</a>
 </div>
